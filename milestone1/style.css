@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .d-flex {
@@ -52,20 +53,34 @@ body {
 
 .user {
   height: 55px;
-  border: 1px solid black;
   justify-content: space-between;
+  padding: 6px;
+  background-color: #dad8d8;
 }
 
 /* user-data */
 .user-data .image {
   width: 40px;
   height: 40px;
-  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.user-data .image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* user-icons */
+.user-icons i {
+  color: #929292;
+  margin: 0 8px;
 }
 
 .alert {
   height: 70px;
   border: 1px solid black;
+  background-color: #8edafc;
 }
 
 .search {
