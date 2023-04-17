@@ -21,6 +21,7 @@ body {
   width: 80%;
   height: 90%;
   border: 1px solid black;
+  display: flex;
 }
 
 /* left-wrap */
@@ -30,21 +31,48 @@ body {
   border: 1px solid black;
 }
 
+.user, .alert, .search {
+  width: 100%
+}
+
 .user {
   height: 55px;
-  width: 100%;
   border: 1px solid black;
 }
 
 .alert {
   height: 70px;
-  width: 100%;
   border: 1px solid black;
 }
 
 .search {
   height: 45px;
-  width: 100%;
   border: 1px solid black;
 }
 /* /left-wrap */
+
+/* right-wrap */
+.right-wrapper {
+  width: 65%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.selected-chat {
+  height: 55px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.chat {
+  width: 100%;
+  height: calc(100% - 110px);
+  border: 1px solid black;
+}
+
+.text-area {
+  height: 55px;
+  width: 100%;
+  border: 1px solid black;
+}
+/* /right-wrap */
