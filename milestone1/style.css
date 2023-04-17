@@ -45,20 +45,21 @@ body {
 .left-wrapper {
   width: 35%;
   border: 1px solid black;
+  background-color: #dad8d8;
+  overflow: hidden;
 }
 
 .user, .alert, .search {
   width: 100%
 }
 
+/* user */
 .user {
   height: 55px;
   justify-content: space-between;
   padding: 6px;
-  background-color: #dad8d8;
 }
 
-/* user-data */
 .user-data .image {
   width: 40px;
   height: 40px;
@@ -71,22 +72,63 @@ body {
   border-radius: 50%;
 }
 
-/* user-icons */
 .user-icons i {
   color: #929292;
   margin: 0 8px;
 }
 
+/* alert */
 .alert {
   height: 70px;
-  border: 1px solid black;
   background-color: #8edafc;
+  padding: 6px;
 }
 
+.alert .bell {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  margin-right: 8px;
+}
+
+.alert .bell i {
+  color: #8edafc;
+}
+
+.alert .text span:first-child {
+  font-size: 13px;
+}
+
+.alert .text span:last-child {
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+/* search */
 .search {
   height: 45px;
   border: 1px solid black;
+  padding: 4px;
 }
+
+.search input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* card */
+.card-area {
+  height: calc(100% - 130px);
+  overflow: scroll;
+}
+.card {
+  width: 100%;
+  height: 80px;
+  border: 1px solid black;
+}
+
 /* /left-wrap ------------------------------------------------ */
 
 /* right-wrap ------------------------------------------------ */
