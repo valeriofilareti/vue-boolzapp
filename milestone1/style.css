@@ -12,4 +12,39 @@ body {
     #2f9688 20%,
     #d7dbd7 20% 80%
     );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.main-wrapper {
+  width: 80%;
+  height: 90%;
+  border: 1px solid black;
+}
+
+/* left-wrap */
+.left-wrapper {
+  width: 35%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.user {
+  height: 55px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.alert {
+  height: 70px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.search {
+  height: 45px;
+  width: 100%;
+  border: 1px solid black;
+}
+/* /left-wrap */
