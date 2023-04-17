@@ -133,11 +133,36 @@ body {
 }
 
 .card .image {
-  width: 80px;
-  height: 80px;
-  border: 1px solid black;
+  width: 60px;
+  height: 60px;
+  margin: 8px 5px;
+  float: left;
 }
 
+.card .image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card-area .name-hour {
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card .name-hour span:last-child,
+.card .last-msg {
+  font-size: 12px;
+  color: #8f8a94;
+}
+
+
+.card .name-hour span:last-child {
+  margin-right: 5px;
+}
+
+.card .last-msg {
+  margin-top: 5px;
+}
 
 /* /left-wrap ------------------------------------------------ */
 
@@ -170,6 +195,7 @@ body {
 
 .selected-chat .text span:last-child{
   font-size: 12px;
+  color: #8f8a94;
 }
 
 /* chat */
