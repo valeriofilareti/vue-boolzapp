@@ -10,9 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Vue Boolzapp</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 </head>
 <body>
-  <div class="main-wrapper">
+  <div id="app" class="main-wrapper">
     <div class="left-wrapper">
       <!-- user -->
       <div class="user d-flex align-center">
@@ -44,12 +46,12 @@
       </div>
       <!-- cards -->
       <div class="card-area">
-        <div class="card">
+        <div v-for="(contact, index) in contacts" class="card">
           <div class="image">
             <img src="img/avatar_1.jpg" alt="">
           </div>
           <div class="name-hour d-flex">
-            <span>Michele</span>
+            <span>{{contacts[index].name}}</span>
             <span>12:00</span>
           </div>
           <p class="last-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, doloremque?</p>
