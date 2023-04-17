@@ -30,6 +30,7 @@ body {
   align-items: center;
 }
 
+/* wrappers */
 .main-wrapper {
   width: 80%;
   height: 90%;
@@ -39,6 +40,14 @@ body {
 
 .left-wrapper, .right-wrapper {
   height: 100%;
+}
+
+/* images */
+.user-data .image, .selected-chat .image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 7px;
 }
 
 /* left-wrap ------------------------------------------------ */
@@ -58,13 +67,6 @@ body {
   height: 55px;
   justify-content: space-between;
   padding: 6px;
-}
-
-.user-data .image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 7px;
 }
 
 .user-data .image img {
@@ -120,14 +122,22 @@ body {
 
 /* card */
 .card-area {
-  height: calc(100% - 130px);
+  height: calc(100% - 170px);
   overflow: scroll;
 }
+
 .card {
   width: 100%;
   height: 80px;
   border: 1px solid black;
 }
+
+.card .image {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+}
+
 
 /* /left-wrap ------------------------------------------------ */
 
@@ -141,11 +151,28 @@ body {
   width: 100%;
 }
 
+/* selected-chat */
 .selected-chat {
   height: 55px;
+  padding: 6px;
   border: 1px solid black;
+  background-color: #dad8d8;
 }
 
+.selected-chat img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.selected-chat .text span:first-child{
+  font-size: 15px;
+}
+
+.selected-chat .text span:last-child{
+  font-size: 12px;
+}
+
+/* chat */
 .chat {
   height: calc(100% - 110px);
   border: 1px solid black;
