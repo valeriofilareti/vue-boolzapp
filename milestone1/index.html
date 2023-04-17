@@ -48,13 +48,13 @@
       <div class="card-area">
         <div v-for="(contact, index) in contacts" class="card">
           <div class="image">
-            <img src="img/avatar_1.jpg" alt="">
+            <img src="{{contacts[index].avatar}}" alt="">
           </div>
           <div class="name-hour d-flex">
             <span>{{contacts[index].name}}</span>
             <span>12:00</span>
           </div>
-          <p class="last-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, doloremque?</p>
+          <p class="last-msg">{{contacts[index].messages[contacts[index].messages.length -1].message}}</p>
         </div>
 
       </div>
