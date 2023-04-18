@@ -202,8 +202,34 @@ body {
 .chat {
   height: calc(100% - 110px);
   border: 1px solid black;
+  background: url(img/mine.jpg);
+  background-position: fixed;
+  padding: 50px 60px;
+  overflow: scroll;
 }
 
+.msg {
+  /* min-width: 200px; */
+  max-width: 500px;
+  display: block;
+  padding: 10px 50px 10px 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.sent {
+  float: right;
+  clear: both;
+  background-color: #d5f9ba;
+}
+
+.received {
+  float: left;
+  clear: both;
+  background-color: #ffffff;
+}
+
+/* text-area */
 .text-area {
   height: 55px;
   border: 1px solid black;
