@@ -5,6 +5,7 @@ createApp({
     return {
       counter: 0,
       newMsgText: '',
+      date1: new Date(),
       contacts: [
         {
           name: 'Michele',

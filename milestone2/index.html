@@ -71,20 +71,31 @@
             <span>Ultimo accesso oggi alle 12:00</span>
           </div>
         </div>
-        <div class="icons"></div>
+        <div class="icons">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-paperclip"></i> 
+          <i class="fa-solid fa-ellipsis-vertical"></i> 
+        </div>
       </div>
       <!-- chat -->
       <div class="chat">
         <div v-for="(message, index) in contacts[counter].messages" 
         class="msg" 
         :class="contacts[counter].messages[index].status"> 
-        {{contacts[counter].messages[index].message}}
+        <div>{{contacts[counter].messages[index].message}}</div>
+        <span>12:00</span>
       </div>
         
       </div>
       <!-- text-area -->
-      <div class="text-area">
-        <input @keyup.enter="pushMsg()" v-model="newMsgText" type="text">
+      <div class="text-area d-flex align-center">
+        <div class="icon-emoji">
+          <i class="fa-regular fa-face-smile"></i> 
+        </div>
+        <input placeholder="Scrivi un messaggio..." class="text-bar" @keyup.enter="pushMsg()" v-model="newMsgText" type="text">
+        <div class="icon-mic">
+          <i class="fa-solid fa-microphone"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -102,3 +113,9 @@
 <!-- <i class="fa-solid fa-bell-slash"></i>    bell slash -->
 
 <!-- <i class="fa-solid fa-paperclip"></i>   clip -->
+
+<!-- <i class="fa-solid fa-magnifying-glass"></i> search -->
+
+<!-- <i class="fa-regular fa-face-smile"></i>  smile -->
+
+<!-- <i class="fa-solid fa-microphone"></i>  mic -->

@@ -190,6 +190,15 @@ body {
   padding: 6px;
   border-left: 1px solid black;
   background-color: #dad8d8;
+  justify-content: space-between;
+}
+
+.selected-chat .icons {
+  padding-right: 10px;
+}
+.selected-chat .icons i {
+  margin: 0 10px;
+  color: #929292;
 }
 
 .selected-chat img {
@@ -221,6 +230,14 @@ body {
   padding: 10px 50px 10px 10px;
   border-radius: 10px;
   margin: 10px 0;
+  position: relative;
+}
+
+.msg span {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
 }
 
 .sent {
@@ -235,9 +252,23 @@ body {
   background-color: #ffffff;
 }
 
+
 /* text-area */
 .text-area {
   height: 55px;
-  border: 1px solid black;
+  justify-content: space-between;
+  background-color: #f3eeea;
 }
+
+.text-area input {
+  width: 100%;
+  height: 70%;
+  padding: 0 10px
+}
+
+.icon-emoji, .icon-mic {
+  width: 60px;
+  text-align: center;
+}
+
 /* /right-wrap ------------------------------------------------ */
