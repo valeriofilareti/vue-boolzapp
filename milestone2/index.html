@@ -84,7 +84,7 @@
       </div>
       <!-- text-area -->
       <div class="text-area">
-        <input @click="pushMsg" v-model="newMsgText" type="text">
+        <input @keyup.enter="pushMsg()" v-model="newMsgText" type="text">
       </div>
     </div>
   </div>
