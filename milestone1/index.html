@@ -48,7 +48,7 @@
       <div class="card-area">
         <div @click="counter = index" v-for="(contact, index) in contacts" class="card">
           <div class="image">
-            <!-- <img :src='{{contacts[index].avatar}}'alt=""> qui -->
+            <img :src='contacts[index].avatar' alt=""> 
           </div>
           <div class="name-hour d-flex">
             <span>{{contacts[index].name}}</span>
@@ -60,10 +60,11 @@
       </div>
     </div>
     <div class="right-wrapper">
+      <!-- selected-chat -->
       <div class="selected-chat d-flex align-center">
         <div class="data d-flex">
           <div class="image">
-            <img src="img/avatar_1.jpg" alt="">
+            <img :src="contacts[counter].avatar" alt="">
           </div>
           <div class="text">
             <span>{{contacts[counter].name}}</span><br>
@@ -74,7 +75,11 @@
       </div>
       <!-- chat -->
       <div class="chat">
-        <div v-for="(message, index) in contacts[counter].messages" class="msg">{{contacts[counter].messages[index].message}}</div>
+        <div v-for="(message, index) in contacts[counter].messages" 
+        class="msg" 
+        :class="contacts[counter].messages[index].status"> 
+        {{contacts[counter].messages[index].message}}
+      </div>
         
       </div>
       <div class="text-area">
