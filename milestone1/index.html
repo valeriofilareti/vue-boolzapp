@@ -46,13 +46,13 @@
       </div>
       <!-- cards -->
       <div class="card-area">
-        <div v-for="(contact, index) in contacts" class="card">
+        <div @click="counter = index" v-for="(contact, index) in contacts" class="card">
           <div class="image">
             <!-- <img :src='{{contacts[index].avatar}}'alt=""> qui -->
           </div>
           <div class="name-hour d-flex">
             <span>{{contacts[index].name}}</span>
-            <span>12:00</span>
+            <span>{{contacts[index].messages[contacts[index].messages.length -1].date.slice(10, 16)}}</span>
           </div>
           <p class="last-msg">{{contacts[index].messages[contacts[index].messages.length -1].message}}</p>
         </div>
@@ -66,42 +66,16 @@
             <img src="img/avatar_1.jpg" alt="">
           </div>
           <div class="text">
-            <span>Michele</span><br>
+            <span>{{contacts[counter].name}}</span><br>
             <span>Ultimo accesso oggi alle 12:00</span>
           </div>
         </div>
         <div class="icons"></div>
       </div>
+      <!-- chat -->
       <div class="chat">
-        <div class="msg sent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fugiat suscipit vitae illum eum eius soluta laudantium, dolore libero, aperiam blanditiis adipisci sapiente autem. Veritatis, at aut non quae est ea quasi, recusandae, eaque sint pariatur sit aliquam voluptatem enim! Placeat vero veniam cupiditate distinctio dolorem modi quaerat, id ipsa? </div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">duabdsuabdshu</div>
-        <div class="msg sent">cuhudhud</div>
-        <div class="msg received">dnuhdushdusx</div>
-        <div class="msg sent">duabdsuabdshu</div>
+        <div v-for="(message, index) in contacts[counter].messages" class="msg">{{contacts[counter].messages[index].message}}</div>
+        
       </div>
       <div class="text-area">
       </div>
