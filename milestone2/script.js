@@ -5,7 +5,14 @@ createApp({
     return {
       counter: 0,
       newMsgText: '',
-      date1: new Date(),
+      answers: [
+        'ok!',
+        'sono al telefono',
+        'ciao',
+        'va bene',
+        'gianfranco',
+        'basta'
+      ],
       contacts: [
         {
           name: 'Michele',
@@ -179,10 +186,11 @@ createApp({
         status: 'sent'
       };
       this.contacts[this.counter].messages.push(newMsg)
+      this.newMsgText = '';
       setTimeout(() => {
         const newAnswer = {
           date: '10/01/2020 15:30:55',
-          message: 'ciao!',
+          message: this.answers[Math.floor(Math.random() * 5)],
           status: 'received'
         };
         this.contacts[this.counter].messages.push(newAnswer)

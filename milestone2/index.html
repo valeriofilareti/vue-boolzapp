@@ -46,7 +46,7 @@
       </div>
       <!-- cards -->
       <div class="card-area">
-        <div @click="counter = index" v-for="(contact, index) in contacts" class="card">
+        <div @click="counter = index" v-for="(contact, index) in contacts" class="card" :class="{active : counter == index}">
           <div class="image">
             <img :src='contacts[index].avatar' alt=""> 
           </div>

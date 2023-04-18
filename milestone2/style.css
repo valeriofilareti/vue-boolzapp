@@ -131,6 +131,10 @@ body {
   border-bottom: 1px solid black;
 }
 
+.active {
+  background-color:#e0e0e0;
+}
+
 .card:hover {
   background-color:#e0e0e0;
   cursor: pointer;
@@ -163,7 +167,6 @@ body {
   font-size: 10px;
   color: #8f8a94;
 }
-
 
 .card .name-hour span:last-child {
   margin-right: 5px;
