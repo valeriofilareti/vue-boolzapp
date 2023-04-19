@@ -199,7 +199,11 @@ createApp({
     },
     chatFilter() {
       this.contacts.forEach(contact => {
-        if(!contact.name.toLowerCase().includes(this.filter.toLowerCase())){contact.visible = false}
+        if(!contact.name.toLowerCase().includes(this.filter.toLowerCase())){
+          contact.visible = false;
+        }else{
+          contact.visible = true;
+        }
         
       });
     }
