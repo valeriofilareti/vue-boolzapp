@@ -62,7 +62,7 @@
           </div>
           <div class="name-hour d-flex">
             <span>{{contacts[index].name}}</span>
-            <span>{{contacts[index].messages[contacts[index].messages.length -1].date.slice(10, 16)}}</span>
+            <span>{{contacts[index].messages[contacts[index].messages.length -1].hour}}</span>
           </div>
           <p class="last-msg">{{contacts[index].messages[contacts[index].messages.length -1].message}}</p>
         </div>
@@ -80,7 +80,7 @@
           </div>
           <div class="text">
             <span>{{contacts[counter].name}}</span><br>
-            <span>Ultimo accesso oggi alle 12:00</span>
+            <span>Ultimo accesso oggi alle {{contacts[counter].messages[contacts[counter].messages.length -1].hour}}</span>
           </div>
         </div>
         <div class="icons">
@@ -96,7 +96,7 @@
         :class="contacts[counter].messages[index].status"> 
         <div>{{contacts[counter].messages[index].message}}</div>
         <!-- -------------------------------------------- -->
-        <span>{{message.date.slice(9, 14)}}</span>
+        <span>{{message.hour}}</span>
         <!-- -------------------------------------------- -->
       </div>
         
