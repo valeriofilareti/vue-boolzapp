@@ -48,14 +48,11 @@
       <!-- cards -->
       <div class="card-area">
         <div 
-
         @click="counter = index" 
         v-for="(contact, index) in contacts" 
         v-show="contact.visible"
         class="card" 
         :class="{active : counter == index}"
-
-
         >
           <div class="image">
             <img :src='contacts[index].avatar' alt=""> 
@@ -95,11 +92,8 @@
         class="msg" 
         :class="contacts[counter].messages[index].status"> 
         <div>{{contacts[counter].messages[index].message}}</div>
-        <!-- -------------------------------------------- -->
         <span>{{message.hour}}</span>
-        <!-- -------------------------------------------- -->
       </div>
-        
       </div>
       <!-- text-area -->
       <div class="text-area d-flex align-center">

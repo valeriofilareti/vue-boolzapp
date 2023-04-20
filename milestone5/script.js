@@ -181,11 +181,10 @@ createApp({
   },
   methods: {
     pushMsg() {
-      // --------------------------------------------
+      //sent ----------------------------------------
       const msgDate = new Date();
-      const hours = msgDate.getHours();
+      const hours = msgDate.getHours() > 9 ? msgDate.getHours() : '0' + msgDate.getHours();
       const minutes = msgDate.getMinutes() > 9 ? msgDate.getMinutes() : '0' + msgDate.getMinutes();
-
       const newMsg = {
         hour: hours + ':' + minutes,
         message: this.newMsgText,
@@ -193,7 +192,7 @@ createApp({
       };
       this.contacts[this.counter].messages.push(newMsg)
       console.log(newMsg.date);
-      // --------------------------------------------
+      // received ------------------------------------
       this.newMsgText = '';
       setTimeout(() => {
         const newAnswer = {
@@ -211,11 +210,9 @@ createApp({
         }else{
           contact.visible = true;
         }
-        
       });
     }
   },
   mounted() {
-
   }
 }).mount('#app')
